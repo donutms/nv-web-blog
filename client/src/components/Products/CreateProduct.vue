@@ -1,10 +1,10 @@
 <template>
   <div class="container blog-wrapper">
-    <main-header navsel="back"></main-header>
-    <h1>สร้างproduct</h1>
+    <main-header navsel="back"></main-header><br>
+    <center><h1>สร้างสินค้า</h1></center>
     <form v-on:submit.prevent = "createproduct">
       <p>
-        <label class="control-label">ชื่อ product: </label>
+        <label class="control-label">ชื่อสินค้า: </label>
         <input type="text" v-model="product.name" class="form-control">        
       </p>
       <p>
@@ -12,7 +12,7 @@
         <input type="text" v-model="product.taste" class="form-control">
       </p>
       <p>
-        <label class="control-label">price :</label>
+        <label class="control-label">ราคา :</label>
         <input type="text" v-model="product.price" class="form-control">
       </p>
       <p>
@@ -56,7 +56,7 @@
       </div>  
        
       <p>
-        <button class="btn btn-success" type="submit">สร้างProduct</button>
+        <button class="btn btn-success" type="submit">สร้างสินค้า</button>
         <button class="btn btn-default" type="button" v-on:click="navigateTo('/products')">กลับ</button>
       </p> 
     </form>   

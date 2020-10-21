@@ -1,22 +1,23 @@
-<template>
-    <div>
-        <div class="blog-header">
- <h2>ส่วนจัดการสินค้า</h2>
+<template >
+<div class="bg"><br>
+<div class="container blog-header">
+<div><br>
+ <center><h2>สินค้า</h2></center>
  <div>
  <form>
- <input type="text" v-model="search" placeholder="Search">
+ <input class="form-control mr-sm-2" type="text" v-model="search" placeholder="Search">
  </form>
 </div>
- <div>
- <button v-on:click="navigateTo('/product/create')">create
-product</button>
- <strong> จํานวน product: </strong> {{products.length}}</div>
+ <div><br>
+ <button  class="btn btn-outline-info" v-on:click="navigateTo('/product/create')">สร้างสินค้า</button>
+ <strong> จํานวนสินค้า: </strong> {{products.length}}</div>
  <br>
  </div>
-
+<div>
  <div v-if="products.length === 0" class="empty-blog">
- *** ไม่มีขอ้ มูล***
- </div>
+ *** ไม่มีข้อมูลในระบบ*** 
+ </div><br>
+</div>
 
  <div v-for="product in products" v-bind:key="product.id" class="blog-list">
  <!-- <p>id: {{ blog.id }}</p> -->
@@ -29,19 +30,22 @@ product</button>
  </div>
 
  <h3>{{ product.name }}</h3>
- <p><strong>tast:</strong> {{ product.taste }}</p>
- <p><strong>status:</strong> {{ product.status }}</p>
- <p><strong>Create:</strong> {{ product.createdAt }}</p>
+ <p><strong>รสชาติ:</strong> {{ product.taste }}</p>
+ <p><strong>สถานะ:</strong> {{ product.status }}</p>
+ <p><strong>วันเวลาที่นำเข้าสินค้า:</strong> {{ product.createdAt }}</p>
  <!-- <p>status: {{ blog.status }}</p> -->
  <p>
- <button v-on:click="navigateTo('/product/'+ product.id)">ดู blog</button>
- <button v-on:click="navigateTo('/product/edit/'+ product.id)">แกไ้ข blog</button>
- <button v-on:click="deleteBlog(product)">ลบข้อมูล</button>
+ <button  class="btn btn-outline-primary" v-on:click="navigateTo('/product/'+ product.id)">ดูข้อมูลสินค้า</button>
+ <button class="btn btn-outline-warning"  v-on:click="navigateTo('/product/edit/'+ product.id)">เเก้ไขสินค้า</button>
+ <button class="btn btn-outline-danger" v-on:click="deleteBlog(product)">ลบข้อมูล</button>
  </p>
  </div>
 
  <div class="clearfix"></div>
+ 
  </div>
+ <br><br><br>
+</div>
 
 </template>
 <script>
@@ -133,7 +137,8 @@ product</button>
  clear: both;
 }
 .blog-list {
- border:solid 1px #dfdfdf;
+ background-color: rgb(245, 245, 245);
+ border:solid 1px #c9c5c5;
  margin-bottom: 10px;
  max-width: 900px;
  margin-left: auto;
@@ -141,9 +146,14 @@ product</button>
  padding: 5px;
  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 }
-.blog-header {
- max-width: 900px;
- margin-left: auto;
- margin-right: auto;
-}
+
+.bg{
+        background-color: rgb(230, 207, 178);
+        width: 100%;
+        height: 100%;
+    }
+.blog-header{
+        background-color: rgb(245, 245, 245);
+        
+    }
 </style>

@@ -1,15 +1,13 @@
 <template>
-    <div>
-        <h1>Show Blog</h1>
-        <p>id: {{ product.id }}</p>
-        <p>name: {{ product.name }}</p>
-        <p>taste: {{ product.taste }}</p>
-        <p>price: {{ product.price }}</p>
-        <p>status: {{ product.status }}</p>
+    <div class="container blog-wrapper">
+        <center><h1>เเสดงสินค้า</h1></center>
+        id : <p class="form-control"> {{ product.id }}</p>
+        ชื่อ : <p class="form-control"> {{ product.name }}</p>
+        รสชาติ : <p class="form-control"> {{ product.taste }}</p>
+        ราคา : <p class="form-control"> {{ product.price }}</p>
+        สถานะ :<p class="form-control"> {{ product.status }}</p>
         <p>
-        <button v-on:click="navigateTo('/product/edit/'+ product.id)">แก้ไข
-        blog</button>
-        <button v-on:click="navigateTo('/products')">กลับ </button>
+        <button class="btn btn-success" v-on:click="navigateTo('/products')">กลับ </button>
         </p>
     </div>
 </template>

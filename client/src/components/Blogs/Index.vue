@@ -1,6 +1,16 @@
 <template>
-    <div>
-        <div class="blog-header">
+<div>
+    <div class="component-wrapper">
+ <div class="hero">
+ 
+ <h1>Webblot from nodejs + vuejs Ebook</h1>
+ <p>By Gooddev.ME</p>
+<div class="clearfix"></div>
+ </div>
+ </div>
+
+
+<div class="blog-header">
  <h2>ส่วนจดัการบลอ็ก</h2>
  <div>
  <form>
@@ -119,5 +129,60 @@ blog</button>
  max-width: 900px;
  margin-left: auto;
  margin-right: auto;
+}
+.col1, .col2, .col3 {
+ border:solid 1px red;
+}
+.categories li.clear a {
+ background: tomato;
+ color: white
+}
+.create-blog {
+ margin-top: 10px;
+}
+@media (max-width: 768px) {
+ .logo {
+ width: 120px;
+ }
+}
+.categories li a {
+ padding: 5px 10px 5px 10px;
+ background:paleturquoise; 
+ color: black;
+ text-decoration: none;
+}
+.blog-header {
+ margin-top: 80px;
+ max-width: 900px;
+ margin-left: auto;
+ margin-right: auto;
+}
+#blog-list-bottom{
+ padding-top:4px;
+}
+.blog-load-finished{
+ padding:4px;
+ text-align: center;
+ background: seagreen;
+ color:white;
+}
+.categories {
+ margin-top: 20px;
+ padding: 0;
+ list-style: none;
+ float: left;
+}
+.categories li {
+ float: left;
+ padding: 2px;
+}
+.blog-list {
+ border:solid 1px #dfdfdf;
+ margin-bottom: 10px;
+ max-width: 900px;
+ margin-left: auto;
+ margin-right: auto;
+ padding: 5px;
+ box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 }
 </style>

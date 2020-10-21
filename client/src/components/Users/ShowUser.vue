@@ -1,10 +1,13 @@
 <template>
-    <div>
-        <h1>Show User</h1>
-        <p>id: {{ user.id }}</p>
-        <p>ชื่อ-นามสกุล : {{ user.name }} - {{ user.lastname }}</p>
-        <p>email: {{ user.email }}</p>
-        <p>password: {{ user.password }}</p>
+    <div class="container blog-wrapper" >
+        <h1>เเสดงผู้ใช้งาน</h1>
+        id: <p class="form-control" > {{ user.id }}</p>
+        ชื่อ-นามสกุล :<p class="form-control"> {{ user.name }} - {{ user.lastname }}</p>
+        Email :<p class="form-control"> {{ user.email }}</p>
+        รหัสผ่าน :<p class="form-control"> {{ user.password }}</p>
+        <p>
+        <button class="btn btn-success" v-on:click="navigateTo('/users')">กลับ </button>
+        </p>
     </div>
 </template>
 <script>
@@ -23,7 +26,12 @@ export default {
         } catch (error) {
             console.log (error)
         }
-    }
+    },
+     methods : {
+            navigateTo (route) {
+                this.$router.push(route)
+            },
+        }
 }
 </script>
 <style scoped>

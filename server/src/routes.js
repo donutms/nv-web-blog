@@ -158,7 +158,9 @@ module.exports = (app) => {
             })
         }
     })
-
-    
+    //login
+    app.post('/front/login',
+        UserAuthenController.clientLogin
+    )
     
 }

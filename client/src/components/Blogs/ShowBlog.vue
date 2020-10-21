@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container blog-wrapper" ><br><br><br><br>
         <h1>Show Blog</h1>
         <p>id: {{ blog.id }}</p>
         <p>title: {{ blog.title }}</p>

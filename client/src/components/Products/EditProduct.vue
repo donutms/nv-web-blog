@@ -1,14 +1,14 @@
 <template>
-    <div>
-        <h1>Edit product</h1>
+    <div class="container blog-wrapper" ><br>
+        <center><h1>เเก้ไขสินค้า</h1></center>
         <form v-on:submit.prevent = "editproduct">
-            <p>name: <input type="text" v-model="product.name"></p>
-            <p>taste: <input type="text" v-model="product.taste"></p>
-            <p>price: <input type="text" v-model="product.price"></p>
-            <p>status: <input type="text" v-model="product.status"></p>
+            <p>ชื่อสินค้า : <input class="form-control" type="text" v-model="product.name"></p>
+            <p>รสชาติ : <input class="form-control" type="text" v-model="product.taste"></p>
+            <p>ราคา : <input class="form-control"  type="text" v-model="product.price"></p>
+            <p>สถานะ : <input class="form-control" type="text" v-model="product.status"></p>
             <p>
-            <button type="submit">update product</button>
-            <button v-on:click="navigateTo('/products')">กลับ</button>
+            <button class="btn btn-success" type="submit">บันทึก</button>
+            <button class="btn btn-light" v-on:click="navigateTo('/products')">กลับ</button>
             </p>
         </form>
     </div>
